@@ -54,23 +54,6 @@ img {
     padding-right: 15px;
 }
 
-.menu-link.current  {
-    color: var(--logo-brand-color);
-    position: relative;
-}
-
-.menu-link.current::after {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--logo-brand-color);
-    bottom: -1px;  /* -1 щоб залізло на сірий бордер, як в макеті */
-    left: 0;
-}
-
-
 /* соцмережі */
 .section {
     padding-top: 94px;
@@ -172,18 +155,14 @@ footer .social-link {
     margin-left: 93px;
 }
 
-/* .focus-container {
-    display: flex;
-    position: relative;
-    outline: 2xp solid #067c16;
-} */
-
 .menu-item:not(:last-child) {
     margin-right: 50px;
 }
 
 .menu-link {
-    display: block;
+    position: relative;
+
+    /* display: block; */
     padding-top: 32px;
     padding-bottom: 32px;
 
@@ -194,6 +173,32 @@ footer .social-link {
     color: var(--black);
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.menu-link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
+
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background-color: var(--logo-brand-color);
+
+    transform: scale(0);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link:hover::after {
+    transform: scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.menu-link.current::after {
+    transform: scale(1);
+}
+
+
 
 /* Контакти в хедері */
 .contacts {
@@ -735,12 +740,11 @@ footer .logo {
     line-height: 1.88;
     color: var(--grey);
 }
-
-
 /* ============= /Зразки робіт (картки) ============= */
 
-/* ============= Модальне вікно ============= */
 
+
+/* ============= Модальне вікно ============= */
 .backdrop {
     position: fixed;
     top: 0;
@@ -748,6 +752,7 @@ footer .logo {
     width: 100%;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2);
+4
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
                 /* visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
@@ -761,16 +766,23 @@ footer .logo {
                 /* visibility 250ms cubic-bezier(0.4, 0, 0.2, 1); */
 }
 
+
+.backdrop.is-hidden .modal {
+    transform: translate(-50%, -50%) scale(0.85);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
+
 .modal {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-
     width: 528px;
     height: 581px;
 
     background-color: var(--white);
+
+    transform: translate(-50%, -50%) scale(1);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 
 }
 
 .order-button-close {
