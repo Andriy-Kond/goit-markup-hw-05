@@ -115,6 +115,7 @@ footer .social-link {
 /* ============= /Компоненти ============= */
 
 
+
 /* ============= Верхній рядок ============= */
 .head-border {
     border-bottom: 1px solid #ECECEC;
@@ -140,8 +141,13 @@ footer .social-link {
     line-height: 1.2;
     color: var(--logo-brand-color);
 }
-.logo-positive { color: var(--logo-positive-color); }
-.logo-negative { color: var(--logo-negative-color); }
+.logo-positive { 
+    color: var(--logo-positive-color); 
+}
+
+.logo-negative { 
+    color: var(--logo-negative-color); 
+}
 
 /* ховер лого по всій площині у заголовку */
 .nav>.logo {
@@ -161,7 +167,6 @@ footer .social-link {
 
 .menu-link {
     position: relative;
-
     /* display: block; */
     padding-top: 32px;
     padding-bottom: 32px;
@@ -238,11 +243,8 @@ footer .social-link {
     margin-right: 10px;
     fill: currentColor;
 }
-
-
-
-
 /* ============= /Верхній рядок ============= */
+
 
 
 /* ============= Секція героя ============= */
@@ -251,7 +253,7 @@ footer .social-link {
     padding-bottom: 200px;
 
     text-align: center; /* наслідується до дітей */
-    /* background-color: var(--background-brand-color); */
+    background-color: var(--background-brand-color);
 }
 
 .overlay {
@@ -303,19 +305,21 @@ footer .social-link {
     background-color: #188CE8;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 /* ============= /Секція героя ============= */
+
 
 
 /* ============= Особливості ============= */
 .features { display: flex; }
 
-.features-item:not(:last-child) { margin-right: 30px; }
+.features-item:not(:last-child) { 
+    margin-right: 30px; 
+}
+
 .features-item {
     display: block;
     justify-content: center;
     align-items: center;
-
 }
 
 .icon-features-box {
@@ -372,7 +376,9 @@ footer .social-link {
 
 .offers { display: flex; }
 
-.offer-item + .offer-item { margin-left: 30px; }
+.offer-item + .offer-item { 
+    margin-left: 30px; 
+}
 
 .offer-container {
     position: relative;
@@ -399,10 +405,6 @@ footer .social-link {
     
     background-color: rgba(47, 48, 58, 0.8);
 }
-
-
-
-
 /* ============= /Чим ми займаємось ============= */
 
 
@@ -411,7 +413,9 @@ footer .social-link {
     background-color: var(--background-btn-color);
 }
 
-.employee { display: flex; }
+.employee { 
+    display: flex; 
+}
 
 .employee-item { 
     align-items: center; 
@@ -420,7 +424,9 @@ footer .social-link {
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
 }
 
-.employee-item + .employee-item { margin-left: 30px; }
+.employee-item + .employee-item { 
+    margin-left: 30px; 
+}
 
 .employee-container {
     padding-top: 30px;
@@ -445,9 +451,6 @@ footer .social-link {
     line-height: 1.18;
     color: var(--grey);
 }
-
-
-
 /* ============= /Наша команда ============= */
 
 
@@ -457,7 +460,6 @@ footer .social-link {
     justify-content: center;
     cursor: pointer;
 }
-
 
 .icon-customer:not(:last-child) {
     margin-right: 30px;
@@ -482,7 +484,7 @@ footer .social-link {
     border-radius: 4px;
     color: #AFB1B8;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-link:hover,
@@ -491,17 +493,14 @@ footer .social-link {
     border: 1px solid var(--logo-brand-color);
     outline: 0;
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .customer-link-icon {
     fill: currentColor;
     width: 106px;
     height: 60px;
-
 }
-
-
 /* ============= /Постійні клієнти ============= */
 
 
@@ -588,8 +587,8 @@ footer .logo {
     cursor: pointer;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .filter-btns {
@@ -610,20 +609,17 @@ footer .logo {
     outline: 0;
 
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
-    box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* ============= /фільр-кнопки ============= */
+
 
 
 /* ============= Зразки робіт (картки) ============= */
 .cards {
     display: flex;
     flex-wrap: wrap;
-}
-
-.card-item {
-    /* position: relative; */
 }
 
 .card-item:not(:nth-child(3n)) {
@@ -769,7 +765,7 @@ footer .logo {
 
 .backdrop.is-hidden .modal {
     transform: translate(-50%, -50%) scale(0.85);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1)
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
@@ -782,7 +778,7 @@ footer .logo {
     background-color: var(--white);
 
     transform: translate(-50%, -50%) scale(1);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1) 
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .order-button-close {
