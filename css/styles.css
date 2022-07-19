@@ -34,9 +34,9 @@ img {
 
 /* Знімаю стилізацію з ul */
 .list-style {
-    list-style: none;
     margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 /* Знімаю стилізацію з <a> */
@@ -210,7 +210,7 @@ footer .social-link {
     align-items: center;
 }
 
-.contact-item+.contact-item {
+.contact-item + .contact-item {
     margin-left: 30px;
 }
 
